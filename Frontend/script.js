@@ -9,8 +9,9 @@ function loadTodos(){
     fetch(URL)
     .then(res => res.json())
     .then(todos => {
-        todoList.innerHTML ='';
 
+        todoList.innerHTML ='';
+        
         todos.forEach(todo => {
             const li = document.createElement('li');
 
