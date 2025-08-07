@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+todoList.txt
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.*
+
+# VSCode ayarları (isteğe bağlı)
+.vscode/
+
+# OS/Sistem dosyaları
+.DS_Store
+Thumbs.db
