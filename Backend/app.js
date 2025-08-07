@@ -8,6 +8,7 @@ const PORT = 5000;
 const filePath = path.join(__dirname, 'todoList.txt');
 
 const server = http.createServer((req, res) => {
+    
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");  
@@ -17,7 +18,6 @@ const server = http.createServer((req, res) => {
     res.end();
     return;
     }
-
 
     const urlParts = req.url.split('/');
     const pathName = urlParts[1];
