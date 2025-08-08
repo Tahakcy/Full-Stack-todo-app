@@ -1,7 +1,7 @@
 let input = document.querySelector('#myInput');
 let showButton = document.querySelector('#showBtn');
 let addButton = document.querySelector('#addBtn');
-let clearAllButton = document.querySelector('#clcBtn');
+//let clearAllButton = document.querySelector('#clcBtn');
 const todoList = document.querySelector('#todoList');
 const URL = 'http://localhost:5000/todoList';
 
@@ -11,7 +11,7 @@ function loadTodos(){
     .then(todos => {
 
         todoList.innerHTML ='';
-        
+//oop temelleri
         todos.forEach(todo => {
             const li = document.createElement('li');
 
@@ -40,10 +40,9 @@ function loadTodos(){
                         completed: checkbox.checked
                     })
                 })
-                    .then(() => loadTodos());
-                    
+                .then(() => loadTodos());
             });
-
+//kullanıcı ile interaksiyon girilecek yerde form kullan (input, click)
             deleteButton.addEventListener('click', () => {
                 fetch(URL+'/'+ todo.id, {
                     method:'DELETE',
